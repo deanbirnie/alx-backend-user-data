@@ -39,7 +39,7 @@ class DB:
         Takes an email and hashed password, saves the user to the database
         and returns a user object.
         """
-        new_user = User(email=email, hashed_password=hashed_password)
-        self._session.add(new_user)
+        user = User(email=email, hashed_password=hashed_password)
+        self._session.add(user)
         self._session.commit()
-        return new_user
+        return user

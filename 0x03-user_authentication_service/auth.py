@@ -61,7 +61,8 @@ class Auth:
         self._db.update_user(user.id, session_id=session_id)
         return session_id
 
-    def get_user_from_session_id(self, session_id: str) -> typing.Union[str, None]:
+    def get_user_from_session_id(self,
+                                 session_id: str) -> typing.Union[str, None]:
         """Get user from session ID"""
         if session_id is None:
             return None
@@ -73,4 +74,3 @@ class Auth:
             return None
         return user
         return None
-    
